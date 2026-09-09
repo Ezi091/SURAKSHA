@@ -24,4 +24,4 @@ SURAKSHA is a software-based urban flood prediction system designed for flood-pr
 ```bash
 cd backend
 .\venv\Scripts\activate
-uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 800
