@@ -1,0 +1,135 @@
+.route-planning {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+
+.route-header {
+  margin-bottom: 16px;
+}
+
+.route-header h3 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.route-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.route-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.route-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.route-input-group label {
+  font-size: 0.85em;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.route-input-group select,
+.route-input-group input {
+  padding: 8px 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.route-input-group select::placeholder,
+.route-input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.route-input-group select:focus,
+.route-input-group input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.route-input-group select:disabled,
+.route-input-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.route-input-group select option {
+  background: #047857;
+  color: white;
+}
+
+.find-route-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.find-route-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.find-route-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.route-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  margin-top: 12px;
+}
+
+.error-icon {
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .route-planning {
+    padding: 16px;
+  }
+
+  .route-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .find-route-btn {
+    padding: 10px 14px;
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,230 @@
+.route-planning-osm {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid #86efac;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.route-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #86efac;
+}
+
+.route-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #047857;
+  letter-spacing: 0.3px;
+}
+
+.route-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #10b981;
+  font-weight: 500;
+}
+
+.route-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.route-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.route-input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #047857;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.location-select,
+.depth-input {
+  padding: 10px 12px;
+  font-size: 13px;
+  border: 1.5px solid #86efac;
+  border-radius: 8px;
+  background: white;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.location-select:hover:not(:disabled),
+.depth-input:hover:not(:disabled) {
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.1);
+}
+
+.location-select:focus,
+.depth-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  background: #f0fdf4;
+}
+
+.location-select:disabled,
+.depth-input:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #d1d5db;
+}
+
+.swap-btn {
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+  background: white;
+  color: #10b981;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 4px 0;
+}
+
+.swap-btn:hover:not(:disabled) {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  transform: rotate(180deg);
+}
+
+.swap-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.find-route-btn {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.find-route-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.find-route-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.find-route-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+.route-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  color: #991b1b;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.error-icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.route-info-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(16, 185, 129, 0.05);
+  border-left: 3px solid #10b981;
+  border-radius: 4px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #047857;
+}
+
+.flood-status {
+  font-weight: 500;
+}
+
+.flood-status strong {
+  color: #059669;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .route-planning-osm {
+    padding: 14px;
+  }
+
+  .route-header h3 {
+    font-size: 15px;
+  }
+
+  .route-subtitle {
+    font-size: 11px;
+  }
+
+  .location-select,
+  .depth-input {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  .find-route-btn {
+    font-size: 13px;
+    padding: 11px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .route-planning-osm {
+    padding: 12px;
+  }
+
+  .route-header h3 {
+    font-size: 14px;
+  }
+
+  .location-select,
+  .depth-input {
+    font-size: 13px;
+  }
+
+  .find-route-btn {
+    width: 100%;
+  }
+}

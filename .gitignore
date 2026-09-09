@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+venv/
+.venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large files — add selectively)
+*.tif
+*.tiff
+*.shp
+*.dbf
+*.shx
+*.prj
+
+# Keep data directory structure
+!data/rainfall/.gitkeep
+!data/terrain/.gitkeep
+!data/drainage/.gitkeep
+!data/roads/.gitkeep
+!data/boundaries/.gitkeep

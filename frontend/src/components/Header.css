@@ -1,0 +1,84 @@
+.suraksha-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #111827;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo-placeholder::after {
+  content: "S";
+  font-size: 24px;
+  color: white;
+}
+
+.suraksha-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.suraksha-header h1 span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+  margin-left: 8px;
+  border-left: 1px solid #4b5563;
+  padding-left: 8px;
+}
+
+.system-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 9999px;
+}
+
+.status-label {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.status-badge {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-normal { background-color: #10b981; color: white; }
+.status-warning { background-color: #f59e0b; color: white; }
+.status-critical { background-color: #ef4444; color: white; }
+.status-severe { background-color: #b91c1c; color: white; }
+.status-evacuation { background-color: #7f1d1d; color: white; animation: pulse 2s infinite; }
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

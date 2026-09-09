@@ -1,0 +1,5 @@
+/* Removed default Vite CSS, keep it clear for Dashboard styling */
+body {
+  margin: 0;
+  padding: 0;
+}
